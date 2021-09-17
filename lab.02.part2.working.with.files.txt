@@ -1,0 +1,315 @@
+MTEC1003 — LAB 02 (revised revised 2/7/21 —lg)
+
+LAB 2 / PART 2: Working With Files
+
+==========
+Follow the instructions line-by-line.
+
+* Type in the commands as is, but ignore the beginning prompt.
+* Enter, tab, up and down are represented by <ENTER><TAB>,<UP> and <DOWN>.
+* "No output" or "nothing happens" are valid answers to any of the questions.
+==========
+
+1a. Go to your home directory.
+
+Write the command that you used to do this below:
+----------
+cd ~
+
+
+==========
+1b. Prove that you're in your home directory.
+
+Write the command that you used to do this - as well as its output - below :
+----------
+Lorenas-MBP-2:~ lorenagaleano$ cd ~
+Lorenas-MBP-2:~ lorenagaleano$
+
+
+==========
+1c. Create a new directory inside your home directory named after this class. Call it "mtec1003-lab-02".
+
+Write the command that you used to do this:
+----------
+mkdir mtech1003
+
+
+==========
+
+==========
+1d. Change into your mtec1003-lab-02 directory.
+
+What command did you use?
+----------
+cd mtech1003-labs
+
+
+==========
+2. Create a directory called my_files.
+Then, change into your new directory.
+
+What two commands did you use?
+----------
+mkdir
+
+
+
+==========
+3. Create a new file using touch:
+
+$ touch foo.txt
+$ ls
+
+Copy and paste the output below.
+----------
+
+Lorenas-MBP-2:desktop lorenagaleano$ touch foo.text
+Lorenas-MBP-2:desktop lorenagaleano$ ls
+Alexname.ai
+Alexname.png
+Alexname.svg
+Atom.app
+DownloadableResources-AdobeCC
+Family bundle 30 designs
+Flowerlogo.ai
+LG Resume.pdf
+Portfolio link.pdf
+Relocated Items.nosync
+Sunflower SVG Bundle
+deer.jpeg
+fire-2117242__340.jpg
+florida-trees-road-travel-preview.jpg
+foo.text
+half-moon-4900317_1280.jpg
+harrisbidenobama-1920x1080_6f91d46bf071bb4dae06f776366fe672.fit-760w.jpg
+icons.ai
+kamala-harris...ai
+loricloseup.jpg
+stars.html
+theroad.psd
+water qouets -02.svg
+
+
+
+==========
+4. Create another new file called "bar.txt".
+
+What command did you use?
+----------
+mkdir bar.txt
+
+
+
+==========
+5. Create a copy of bar.txt called baz.txt, and then list the files again.
+
+Write the commands that you used.
+Also, copy and paste the output of your file listing below.
+----------
+
+
+cp bar.txt
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+Lorenas-MBP-2:desktop lorenagaleano$ mv bar.txt baz.txt
+Lorenas-MBP-2:desktop lorenagaleano$
+
+
+
+
+
+==========
+6. Delete the file called bar.txt and then list the files again.
+
+Write the command that you used to remove the file.
+Copy and paste the output of your file listing below.
+----------
+rm bar.txt
+ls
+
+
+
+
+==========
+7. Move the file called foo.txt to qux.txt and then list the files again.
+
+
+Write the command that you used to move the file.
+Copy and paste the output of your file listing below.
+----------
+mv foo.txt -/icloud drive/desktop/qux.txt
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+
+
+
+
+
+
+
+==========
+8. Go up one directory so that you're back in ~/mtec1003-lab-02. What command did you use?
+----------
+..
+
+
+==========
+9. Try removing the directory called my_files using rmdir.
+
+Write out the command that you used and what happened.
+----------
+rmdir my_files
+rmdir: my_files: No such file or directory
+
+
+
+
+==========
+10. Try removing the directory called my_files using rm.
+
+Write out the command that you used and what happened.
+----------
+rm my_files
+deleted files
+
+
+==========
+11. First: MAKE SURE YOU'RE IN THE mtec1003-lab-02 directory!
+***If you accidentally delete your other files, you'll have to start over!!***
+
+Force the removal of the directory and its files using the -rf flag
+
+Use this command:
+
+$ rm -rf my_files
+(options r = recursive; f = skip confirmation)
+----------
+rm -rf my_files
+Lorenas-MBP-2:lab02 lorenagaleano$
+
+
+
+
+==========
+12. There's a txt file version of a book located in the mtec1003-lab-02 folder.  It is in the following directory if you're in the lab folder:
+
+books/other/pg1232.txt
+
+Use the command called cat on the file to show its contents.
+
+Describe what happened below.
+----------
+cd books/other
+cat pg1232.txt
+
+Terminal opened the file called pg 1232.txt inside Terminal
+
+
+
+
+==========
+13. That was a lot of text.  Let's find ways to limit it.  Using the same file...
+
+books/other/pg1232.txt
+
+Use the command, head, on the file to show the contents of the beginning of the file.
+
+Write the command that you used below.  Write the last line of the output below (it should be the title).
+----------
+head pg1232.txt
+Title: The Prince
+
+
+
+
+==========
+14. Using the same file again!
+
+books/other/pg1232.txt
+
+Use tail on the file to show the contents of the end of the file.
+
+Write the command that you used below.  Write the last line of the output below.
+----------
+tail pg1232.txt
+
+
+Most people start at our Web site which has the main PG search facility:
+
+    http://www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+
+
+==========
+15. Using the same file...
+
+books/other/pg1232.txt
+
+Use less and more on the file to show the contents of the file.  Try pressing spacebar and/or q afterwards.
+
+Write the command that you used below.  Describe what spacebar and q does after using either less or more.
+----------
+less pg1232.txt
+(LESS shows you less of the Terminal and uses search word to look through the text)
+(spacebar shows you the top portion of the text. )
+(q lets you exit out of this viewing )
+
+
+
+
+==========
+16. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
+
+(Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
+----------
+Less and more when yourlooking for a specifc term to read about in a text you can use Less and more to navigate with in the file by using serch words.
+cat is a faster way to opens files in Terminal
+if you want to navigate to the bottom of the text.
+and if you were looking for the title you could use head
+
+
+
+
+
+==========
+17.  How many words are in pg1232.txt?  What command did you use to determine the word count?
+----------
+
+wc pg1232.txt
+    5063   52639  305864 pg1232.txt
+
+
+
+
+
+==========
+18.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
+----------
+
+
+wc -l pg1232.txt
+    5063 pg1232.txt
+
+
+
+==========
+19.  Make sure you're in the books/other folder.  Copy all of the txt files from that folder to your home directory using wildcard matching.
+
+Write the command that you used below.
+----------
+
+cp -r pg1232.txt /icloud drive/desktop/mtech1003/
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+      cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+
+
+
+==========
+Next: Save this file. Then, using your mouse or a Terminal command that you learned this week, MOVE this file into your "mtec1003-lab-02" folder.
+
+And that's it! Now, go on to LAB 2 / PART 3...
+----------
